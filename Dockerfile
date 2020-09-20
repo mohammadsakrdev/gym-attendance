@@ -8,15 +8,19 @@ ENV JWT_SECRET=wYbUgUPYWxHd9y
 ENV JWT_EXPIRE=14d
 ENV BASE_API_URL=/api/v0
 ENV BCRYPT_SALT_ROUNDS=10
+ENV REDIS_HOST=redis-server
+ENV REDIS_PORT=6379
+ENV RQMS_NAME_SPACE='RQMS_NAMESPACE'
+ENV REDIS_NOTIFICATION_QUEUE='NOTIFICATION_QUEUE'
+ENV CHECK_IN='CHECK_IN'
+ENV CHECK_OUT='CHECK_OUT'
+ENV DEFAULT_NOTIFICATION_TYPE=2
+ENV ATTENDANCE_KEY='attendance'
+ENV ATTENDANCE_THRESHOLD=2
 
 # make dir for the application build output
 RUN mkdir -p /usr/src/app
 RUN chown node -R /usr/src/app
-
-# install some useful dependicies
-# RUN apt-get update && apt-get install -y git curl wget g++ make python bzip2
-RUN apk update || true
-RUN apk add git curl wget g++ make python bzip2 || true
 
 # copy package.json and install npm dependicies
 WORKDIR /usr/src/app

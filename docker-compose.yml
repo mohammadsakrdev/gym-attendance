@@ -7,11 +7,11 @@ services:
     ports:
       - '3000:3000'
     links:
-      - redis
+      - redis-server
       - mongo
     depends_on:
       - mongo
-      - redis
+      - redis-server
   mongo:
     container_name: mongo
     image: 'mongo:4'

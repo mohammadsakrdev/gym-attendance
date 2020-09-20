@@ -2,6 +2,8 @@
 
 To manage gym attendance, control enrollment
 
+# Running the app with socker-compose
+
 To start up the containers, we can open the terminal (or command prompt) in the root folder of our project and issue the below command:
 
 \$ docker-compose up

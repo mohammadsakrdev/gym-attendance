@@ -1,0 +1,20 @@
+version: '3'
+services:
+  backend:
+    container_name: backend-api
+    restart: always
+    build: .
+    ports:
+      - '3000:3000'
+    links:
+      - redis
+      - mongo
+    depends_on:
+      - mongo
+      - redis
+  mongo:
+    container_name: mongo
+    image: 'mongo:4'
+  redis-server:
+    container_name: redis
+    image: redis:latest

@@ -1,7 +1,7 @@
 const authDefinitions = require('./auth-definitions');
-const transactionsDefinitions = require('./transactions-definitions');
+const attendanceDefinitions = require('./attendance-definitions');
 
 module.exports = {
   ...authDefinitions,
-  ...transactionsDefinitions
+  ...attendanceDefinitions
 };

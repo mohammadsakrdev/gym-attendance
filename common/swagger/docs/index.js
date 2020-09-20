@@ -1,7 +1,7 @@
 const authDocs = require('./auth-docs');
-const transactionsDocs = require('./transactions-docs');
+const attendanceDocs = require('./attendance-docs');
 
 module.exports = {
   ...authDocs,
-  ...transactionsDocs
+  ...attendanceDocs
 };

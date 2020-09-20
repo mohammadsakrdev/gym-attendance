@@ -12,6 +12,6 @@ router.post(
   userSignupController
 );
 
-router.post('/login', requestValidator(loginSchema), loginController);
+router.post('/user/login', requestValidator(loginSchema), loginController);
 
 module.exports = router;

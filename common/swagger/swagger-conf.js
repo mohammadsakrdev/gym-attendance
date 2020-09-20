@@ -1,17 +1,17 @@
 module.exports = {
   openapi: '3.0.0',
   info: {
-    title: 'QI Payment Gateway',
-    description: 'QI Payment Gateway backend APIs documentation for developers',
-    termsOfService: 'https://qi.iq/english/services',
+    title: 'Gym Attendance',
+    description: 'Gym backend APIs documentations',
+    termsOfService: 'https://gym/english/services',
     contact: {
-      name: 'QI Gateway API Support',
-      url: 'https://qi.iq/english/contact-us',
-      email: 'qicard@qicard.net'
+      name: 'Gym API Support',
+      url: 'https://gym/english/contact-us',
+      email: 'support@gym.net'
     },
     license: {
       name: 'Apache 2.0',
-      url: 'https://qi.iq/english/about-us'
+      url: 'https://gym/english/about-us'
     },
     version: '1.0'
   },
@@ -25,16 +25,6 @@ module.exports = {
           default: 'http'
         }
       }
-    },
-    {
-      url: '{protocol}://pay-uat.qi.iq:5050/api/v0',
-      description: 'Staging Server',
-      variables: {
-        protocol: {
-          enum: ['https'],
-          default: 'https'
-        }
-      }
     }
   ],
   tags: [
@@ -42,7 +32,7 @@ module.exports = {
       name: 'Auth'
     },
     {
-      name: 'Transaction'
+      name: 'Attendance'
     }
   ]
 };

@@ -7,6 +7,7 @@ const errorHandler = require('../middleware/errorHandler');
 const swaggerDocs = require('../swagger');
 // Route files
 const authRoutes = require('../../modules/auth/auth.routes');
+const attendanceRoutes = require('../../modules/attendance/attendance.routes');
 const logger = require('../config/winston')(module);
 
 /**
@@ -24,7 +25,9 @@ module.exports = (app) => {
     swaggerUi.serve,
     swaggerUi.setup(swaggerDocs)
   );
+
   app.use(`${config.baseUrl}/auth`, authRoutes);
+  app.use(`${config.baseUrl}/attendance`, attendanceRoutes);
 
   // Handling Not Found
   app.use(notFoundHandler);

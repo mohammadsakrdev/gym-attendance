@@ -22,7 +22,7 @@ const logger = require('./common/config/winston')(module);
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 1000, // limit each IP to 1000 requests per windowMs,
-  message: 'Too many requests to QI payment gateway, please try again later.'
+  message: 'Too many requests to Gym attendance, please try again later.'
 });
 
 // Express App

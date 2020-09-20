@@ -1,11 +1,5 @@
-const decrypt = require('./decrypt');
-const encrypt = require('./encrypt');
-const generateExpirationDate = require('./generate-expiration-date');
-const generateOTP = require('./generate-otp');
+const notify = require('./notify');
 
 module.exports = {
-  decrypt,
-  encrypt,
-  generateExpirationDate,
-  generateOTP
+  notify
 };
